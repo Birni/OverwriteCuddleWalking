@@ -6,10 +6,10 @@ target_include_directories(OverwriteCuddleWalking
 )
 
 set( SOURCE_FILES
-   ${CMAKE_CURRENT_SOURCE_DIR}/OverwriteCuddleWalking.cpp
+   ${CMAKE_CURRENT_SOURCE_DIR}/Hooks.cpp
 )
 set( HEADE_FILES
-   ${CMAKE_CURRENT_SOURCE_DIR}/OverwriteCuddleWalking.h
+   ${CMAKE_CURRENT_SOURCE_DIR}/Hooks.h
 )
 
 target_sources(OverwriteCuddleWalking
