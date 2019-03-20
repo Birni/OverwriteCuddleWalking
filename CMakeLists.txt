@@ -15,15 +15,16 @@ set_target_properties( OverwriteCuddleWalking PROPERTIES
     CXX_EXTENSIONS NO
 )
 
+
+
 add_library(ark_api STATIC IMPORTED)
 set_target_properties(ark_api PROPERTIES
-  IMPORTED_LOCATION ${PATH_ARK_API1}/lib/ArkApi.lib
+  IMPORTED_LOCATION ${PATH_ARK_API1}/out_lib/ArkApi.lib
  # IMPORTED_LOCATION ${PATH_ARK_API1}/lib/MinHook.x64.lib
   INTERFACE_INCLUDE_DIRECTORIES ${PATH_ARK_API1}/version/Core/Public
 )
 
-#ADD_DEFINITIONS(-DUNICODE)
-ADD_DEFINITIONS(-D_UNICODE)
+ADD_DEFINITIONS(-D_UNICODE -DARK_GAME)
 
 set_target_properties(OverwriteCuddleWalking PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(OverwriteCuddleWalking ark_api)
